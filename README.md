@@ -1,21 +1,22 @@
- I have developed the  spring bath in springboot using like a email utility,I have  try my level best.
-A sample Spring Batch application to send emails to several recipients. It feeds email addresses from a csv file and sends an email to each recipient including an attachment. A sample csv file and attachment file are provided as samples. The code uses the Spring Batch project to configure a job for this task.
-I've been using this application to send personal codes and specific instructions on how to register to some PaaS and IaaS providers to my customer. The project is tailored to this specific use case, where instructions are sent as an attachment and the body of the email contains the personal code to redeem in order to get customer access to some cloud provider.
-How to run the application:
-Java 8 is required. To run the application:
+CUSTOMER-SIMMANAGMENT-SERVICE
 
-mvn clean package
-java -jar target/mail-batch-0.0.1-SNAPSHOT.jar \
-  --spring.mail.host=<host> \
-  --spring.mail.port=<port> \
-  --spring.mail.username=<user> \
-  --spring.mail.password=<pass> \
-  --codeurjc.batch.data=data.csv \
-  --codeurjc.batch.attachment=sample-attachment.txt
-Release changes:
-0.2.0
+This service will create and stores Customer and SIM data into DB .when user register ,also this service will perform retrival of customer and sim card details 
+based on specific checks..i.e like triggering mails to customer emails before 7 days of their birthdays ,also will export daily report with customers with sim numbers of whose birthdays on same day.
 
-Add velocity templates for building email subject and body
-0.1.0
+Build:
 
-Initial implementation
+Mvn clean install
+
+Deploy:
+
+mvn deploy
+
+Java version:
+
+java8
+
+DB:
+
+Postgres
+
+
